@@ -9,7 +9,7 @@
 
 This is for when you want to give the user the option to use a text url or a t4 Section Link.
 
-```
+```language-html
 <a href="<t4 type="content" name="Section Link" output="linkurl" modifiers=""  /><t4 type="content" name="URL Link" output="normal" modifiers=""  />">  <!-- any content you wish to surround --> </a>
 ```
 
