@@ -1,6 +1,9 @@
-#Navigation objects cheatsheet for t4
+# Navigation objects cheatsheet for t4
 *snippets and notes on using t4 nav objects*
-Full details can be found on the [t4 extranet](https://community.terminalfour.com/product-info/terminalfour/80/assets/navigation/)
+
+*Full details can be found on the [t4 extranet](https://community.terminalfour.com/product-info/terminalfour/80/assets/navigation/)*
+
+- - -
 
 ## Optional output for section link OR text link
 
