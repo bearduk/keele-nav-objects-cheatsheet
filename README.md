@@ -61,3 +61,12 @@ By default, Media elements are formatted using the Media content layout on the M
 In the example above, the "Image" element, which is a Media element, is formatted using the "path/*" layout on the Media Content type.
 
 ```
+
+## Linking between formatters
+
+Example taken from the 2018 A-Z in development:
+
+```html
+<a href="<t4 type="content" output="fulltext" formatter="text/html" modifiers="nav_sections" name="Course Title" />"> Link </a>
+```
+Note that output is 'fulltext' but the formatter is also specified. Unfortunately, this will give a .php output rather than folder url. It may be possible to remove the php filename though some other way, post publish.
