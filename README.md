@@ -64,7 +64,14 @@ In the example above, the "Image" element, which is a Media element, is formatte
 
 ## Linking between formatters
 
-Example taken from the 2018 A-Z in development:
+If you want to do this-- make an A-Z from a selection of sections/content but use a different formatter for the A-Z list, do this:
+
+- create a formatter on the content type e.g. 'text/az'
+- create a nav object that pulls in the content. Important, you must untick the 'ignore data ordering' as that only works if you're looking at one section. If you want to pull in from a branch, it must be unticked. You must also enter 'Last Modified' for the 'Content Type element for date'. Note that you'll need to sort the A-Z manually using JS or similar.
+- IMPORTANT: in the text/az, you must add a 'Return to Index' navigation object e.g. ```<!-- navigation object : UG 2018 Return to Index --><t4 type="navigation" id="355"/>```
+
+
+Another much messier method used for a while in the 2018 A-Z in development:
 
 ```html
 <a href="<t4 type="content" output="fulltext" formatter="text/html" modifiers="nav_sections" name="Course Title" />"> Link </a>
