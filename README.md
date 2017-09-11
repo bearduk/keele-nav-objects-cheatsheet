@@ -62,6 +62,34 @@ In the example above, the "Image" element, which is a Media element, is formatte
 
 ```
 
+## Outputting paths
+
+You can use the path/* to output path. This is useful e.g. if you want to use the picture elemenet for responsive image sizes..
+
+```html
+<picture>
+<source srcset="T4 TAG PATH FOR IMAGE">
+<img src="T4 TAG PATH FOR DEFAULT IMAGE" alt="T4 TAG FOR ALT TEXT">
+</picture>
+```
+
+> Don't forget, `<picture>` needs a polyfill for some browsers.
+
+For a Media element, you can use: 
+```html
+<t4 type="content" name="Media Image" output="normal" modifiers="" formatter="path/*" />
+```
+
+For a File element, you can use (note that you output it as a file, then grab the path formatter:
+```html
+<t4 type="content" name="Image uploaded by user directly to content type" output="file" modifiers="" formatter="path/*" />
+```
+
+You would then need to enter the alt text in a separate field though i.e.
+```html
+<t4 type="content" name="Alt text" output="normal" modifiers=""  />
+```
+
 ## Linking between formatters
 
 If you want to do this-- make an A-Z from a selection of sections/content but use a different formatter for the A-Z list, do this:
