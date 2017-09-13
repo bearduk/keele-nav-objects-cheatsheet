@@ -80,9 +80,9 @@ For a Media element, you can use:
 <t4 type="content" name="Media Image" output="normal" modifiers="" formatter="path/*" />
 ```
 
-For a File element, you can use (note that you output it as a file, then grab the path formatter:
+For a File element, you can use (note that you output it as a file but then there's no need for a formatter becuase the default layout is path anyway):
 ```html
-<t4 type="content" name="Image uploaded by user directly to content type" output="file" modifiers="" formatter="path/*" />
+<t4 type="content" name="Image uploaded by user directly to content type" output="file" modifiers="" />
 ```
 
 You would then need to enter the alt text in a separate field though i.e.
