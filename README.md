@@ -110,3 +110,7 @@ Note that output is 'fulltext' but the formatter is also specified. Unfortunatel
 
 Top Content navigation object only works with content that has a date associated with it - usually a date element within the content type. If you updated the object and typed "Last Modified" in the "Content Type element for date" then it will find the last 10 pieces of content based on the "Last Modified" date of the content.
 Alternatively, you may be better off using Publish to One File. It displays all content below the section to which it is added, publishing a branch of content on one page. It will follow the TERMINALFOUR Site Manager hierarchy and pull in the content from those sections.
+
+## Publish to One File
+
+See previous comment on Top Content. For News, it may be simpler to just render out the entire branch. It lets you specify the formatter too and also paginates if required.
