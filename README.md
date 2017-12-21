@@ -26,6 +26,22 @@ To do this, the "process-format" attribute must be set to true, and the quote sy
 <t4 type="content" output="selective-output" process-format="true" modifiers="" name="Name" format="<p><t4 type=&quot;lang-var&quot; default-language=&quot;en&quot; en=&quot;Name&quot; ga=&quot;Irish Name&quot; fr=&quot;French Name&quot; /> : $value</p>" />
 ```
 
+## Selective output example using paths
+
+Useful for when you want an optional output for something like a picture/srcset element
+
+```html
+<t4 type="content" output="selective-output" process-format="true" modifiers="medialibrary, nav_sections" name="Header image 1600x600" format="<div class=&quot;module banner align-centre&quot;>
+			<picture>
+				<source srcset=&quot;<t4 type=&quot;content&quot; name=&quot;Header image 1600x600&quot; output=&quot;normal&quot; modifiers=&quot;&quot; formatter=&quot;path/*&quot; />&quot;>
+				<img src=&quot;<t4 type=&quot;content&quot; name=&quot;Header image 1600x600&quot; output=&quot;normal&quot; modifiers=&quot;&quot; formatter=&quot;path/*&quot; />&quot; alt=&quot;<t4 type=&quot;content&quot; name=&quot;Header image alt text&quot; output=&quot;normal&quot; modifiers=&quot;&quot;  />&quot;>
+			</picture>
+			<div class=&quot;inner&quot;>
+
+			</div>
+	</div>" />
+```
+
 ## Output linktext or linkurl
 
 ### output name only of section / content link
