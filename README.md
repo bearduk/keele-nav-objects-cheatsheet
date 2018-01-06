@@ -134,3 +134,44 @@ Alternatively, you may be better off using Publish to One File. It displays all 
 ## Publish to One File
 
 See previous comment on Top Content. For News, it may be simpler to just render out the entire branch. It lets you specify the formatter too and also paginates if required.
+
+## Publish lists as arrays
+
+Sometimes you may want to output an array from a t4 list. Commonly done in JSON format. You can do this in two ways
+
+> Programmable layout e.g. 
+
+```js
+	var modeOfStudyTag = '<t4 type="content" name="Mode of study" output="normal" modifiers="striptags"  />';
+
+	var modeOfStudy = BrokerUtils.processT4Tags (dbStatement, publishCache, section, content, language, isPreview, modeOfStudyTag);
+
+	// modeOfStudy Array build
+	// grab the comma list from t4
+	var modeofStudyString = new String(modeOfStudy); // e.g. 'undergradute, postgraduate taught'
+	// remove spaces after commas
+	var modeofStudyStringCompress = modeofStudyString.replace(/\s*,\s*/g, ","); // e.g. 'undergradute,postgraduate taught'
+	// create an array
+	var modeOfStudyArray = modeofStudyStringCompress.split(',');
+	var modeOfStudyOutput = JSON.stringify(modeOfStudyArray);
+```
+
+or if programmable layouts are not available, it may be feasible to hack this way
+
+> Normal formatter
+
+In the list, add quotes to the Name value e.g. row 1 would have 
+
+name: "School of whatever" and value: School of whatever
+
+Then in the output formatter you can output the name instead of the default value e.g.
+
+```html
+<t4 type="content" name="Element Name" output="normal" display_field="name" />
+```
+
+You would need to surround that with the start and end of an array of course. ```[ t4 tag here ]```
+
+
+
+
