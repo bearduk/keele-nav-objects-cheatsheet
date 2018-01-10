@@ -180,3 +180,13 @@ There is a Content Type under Global called 'SectionMetaDescription'. This house
 NOTE that the Content Type has a template_type of either 10 (to edit) but always 30 to act as a system template.
 
 Any field/elements added to the SectionMetaDescription will appear on the Section General tab.
+
+Section meta aproach:
+
+```
+SELECT * from template WHERE id=[Put the SectionMeta Description Template ID in here]
+
+UPDATE template SET template_type=10 WHERE id=<TEMPLATE ID>
+
+UPDATE template SET template_type=30 WHERE id=<TEMPLATE ID>
+```
