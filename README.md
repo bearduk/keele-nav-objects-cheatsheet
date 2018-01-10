@@ -172,6 +172,11 @@ Then in the output formatter you can output the name instead of the default valu
 
 You would need to surround that with the start and end of an array of course. ```[ t4 tag here ]```
 
+## SectionMetaDescription
 
+This has been enabled globally on the system and set in the Hierarchy Handler 'Metadata Type'.
+There is a Content Type under Global called 'SectionMetaDescription'. This houses as many formatters as you like and can handle programmable layouts i.e. menu levels etc.
 
+NOTE that the Content Type has a template_type of either 10 (to edit) but always 30 to act as a system template.
 
+Any field/elements added to the SectionMetaDescription will appear on the Section General tab.
