@@ -190,3 +190,5 @@ UPDATE template SET template_type=10 WHERE id=<TEMPLATE ID>
 
 UPDATE template SET template_type=30 WHERE id=<TEMPLATE ID>
 ```
+
+> Note that once an element has been added to the SectionMeta Description, the name can not be changed later. You must remove and add a new one.
