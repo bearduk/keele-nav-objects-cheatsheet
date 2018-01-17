@@ -192,3 +192,13 @@ UPDATE template SET template_type=30 WHERE id=<TEMPLATE ID>
 ```
 
 > Note that once an element has been added to the SectionMeta Description, the name can not be changed later. You must remove and add a new one.
+
+## Getting a unique id from a piece of content
+
+Useful to tag several instances of a Content Type on a page as unique
+
+```
+unique<t4 type="meta" meta="content_id" />
+```
+
+would output e.g. `unique37584`. This would be used as a CSS class or ID for example.
