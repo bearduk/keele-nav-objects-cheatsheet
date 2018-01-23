@@ -202,3 +202,35 @@ unique<t4 type="meta" meta="content_id" />
 ```
 
 would output e.g. `unique37584`. This would be used as a CSS class or ID for example.
+
+## Adding an item to a t4 list using SQL
+
+So to add a new value to the list mentioned:
+
+If you hover over the edit button of the list, it should mention what id it is.
+Note lid=5
+
+Alternatively. database lookup of list:
+
+`select * from predefined_list WHERE name like '%CRSE%'`
+
+Found id = 128
+
+(Just substitute CRSE with your search)
+
+Lookup of elements in current list:
+
+ `SELECT * FROM predefined_list_entry WHERE list_id = 128 ORDER BY entry_id ASC`
+Based on returned set, I took the highest entry_id and added 1 = 638
+
+Prototype - not run on database
+
+Following order of columns in table from previous select query
+`INSERT INTO predefined_list_entry  (list_id, entry_id, name, default_selected, sub_list_id, language, value) `
+
+Note: Name, language and value are strings so we surround their values with quotes '.
+Default selected: Is this element the default value of the list? 1 if yes, otherwise 0.
+Sub_list_id: Is this element a list of another list? If so, add id for of the sub list, otherwise 0.
+Final Insert Statement
+
+`INSERT INTO predefined_list_entry VALUES (128, 638, '3 years / 4 years with international or placement year', 0, 0, 'en', '3 years / 4 years with international or placement year')`
