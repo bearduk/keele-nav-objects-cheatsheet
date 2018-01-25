@@ -17,6 +17,12 @@ This is for when you want to give the user the option to use a text url or a t4 
 
 Selective output does not currently work with file or image elements. (Nov 2017, v7).
 
+> **NOTE** that you *can* use e.g. a checkbox for selective output and place a normal file or image tag within that e.g.
+
+```html
+<t4 type="content" output="selective-output" process-format="true" modifiers="medialibrary, nav_sections" name="Show further information document link" format="<a href=&quot;<t4 type=&quot;content&quot; name=&quot;Further Information document&quot; output=&quot;file&quot; modifiers=&quot;&quot; />&quot;>Supplementary Information</a>" />
+```
+
 ## Selective Output Contains T4 tags
 
 The format attribute can contain other T4 tags.
