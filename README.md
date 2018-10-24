@@ -17,6 +17,8 @@ This is for when you want to give the user the option to use a text url or a t4 
 
 Selective output does not currently work with file or image elements. (Nov 2017, v7).
 
+> **NOTE** that if outputting a path to an image (File element) then you could use an alt field for the selective output and then place the path to the image and the surrounding img tag etc within it. $value would be the alt.
+
 > **NOTE** that you *can* use e.g. a checkbox for selective output and place a normal file or image tag within that e.g.
 
 ```html
